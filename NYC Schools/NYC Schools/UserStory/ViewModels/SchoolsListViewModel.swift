@@ -26,10 +26,10 @@ final class SchoolsListViewModel {
 
     weak var output: SchoolsListViewModelOutput?
 
-    private let interactor: SchoolsListInteractorProtocol
+    private let interactor: SchoolsInteractorProtocol
     private var schools = [String: School]()
 
-    init(interactor: SchoolsListInteractorProtocol = SchoolsListInteractor()) {
+    init(interactor: SchoolsInteractorProtocol = SchoolsInteractor()) {
         self.interactor = interactor
     }
 

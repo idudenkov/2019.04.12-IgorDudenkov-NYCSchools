@@ -39,7 +39,7 @@ final class ShoolSatViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         bindViewModel()
         viewModel.viewDidLoad()
     }
@@ -67,7 +67,7 @@ private extension ShoolSatViewController {
     }
 }
 
-private extension ShoolSatViewModel.DisplayModel {
+extension ShoolSatViewModel.DisplayModel {
 
     static let dummy = ShoolSatViewModel.DisplayModel(schoolName: "", mathScore: "", readingScore: "", writingScore: "")
 }

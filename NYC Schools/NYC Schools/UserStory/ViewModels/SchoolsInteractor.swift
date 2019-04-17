@@ -1,5 +1,5 @@
 //
-//  SchoolsListInteractor.swift
+//  SchoolsInteractor.swift
 //  NYC Schools
 //
 //  Created by Igor Dudenkov on 17/04/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol SchoolsListInteractorProtocol {
+protocol SchoolsInteractorProtocol {
     var schools: [School] { get }
 
     func fetchSat(forSchool identifer: String, completion: @escaping (Result<[Sat], ApiError>) -> Void)
@@ -17,7 +17,7 @@ protocol SchoolsListInteractorProtocol {
 
 }
 
-final class SchoolsListInteractor: SchoolsListInteractorProtocol {
+final class SchoolsInteractor: SchoolsInteractorProtocol {
 
     typealias RepositoryContiner = (schools: NYCSchoolsRepositoryProtocol, sat: NYCSchoolsSatRepositoryProtocol)
     private let repositoryContiner: RepositoryContiner

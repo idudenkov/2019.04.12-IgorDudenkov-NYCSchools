@@ -9,20 +9,10 @@
 import Foundation
 
 protocol NYCSchoolsSatApiServiceProtocol {
-    func fetchSat(completion: @escaping (Result<[SatDto], ApiError>) -> Void)
     func fetchSat(forSchool identifer: String, completion: @escaping (Result<[SatDto], ApiError>) -> Void)
 }
 
 final class NYCSchoolsSatApiService: NYCSchoolsSatApiServiceProtocol {
-
-    func fetchSat(completion: @escaping (Result<[SatDto], ApiError>) -> Void) {
-        let executor = try? ApiRequestExecutor(endpoint: BaseUrls.baseURL + BaseUrls.satScoresURL)
-        executor?.execute(completionQueue: .global()) { response in
-            DispatchQueue.main.async {
-                completion(response.result)
-            }
-        }
-    }
 
     func fetchSat(forSchool identifer: String, completion: @escaping (Result<[SatDto], ApiError>) -> Void) {
         let path = BaseUrls.baseURL + BaseUrls.satScoresURL + QueriesComponent.dbn(identifer).rawValue
