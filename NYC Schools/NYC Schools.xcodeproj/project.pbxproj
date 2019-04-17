@@ -22,8 +22,12 @@
 		7E84043C22674970000CB1D7 /* Result+additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84043B22674970000CB1D7 /* Result+additional.swift */; };
 		7E84043E22676809000CB1D7 /* NYCSchoolsSatStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84043D22676809000CB1D7 /* NYCSchoolsSatStorageService.swift */; };
 		7E84044022676A27000CB1D7 /* DBSat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84043F22676A27000CB1D7 /* DBSat.swift */; };
+		7E840443226774AA000CB1D7 /* SchoolsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E840442226774AA000CB1D7 /* SchoolsListViewModel.swift */; };
+		7E840445226776D8000CB1D7 /* SchoolsListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E840444226776D8000CB1D7 /* SchoolsListInteractor.swift */; };
+		7E84044922677C9A000CB1D7 /* SchoolsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84044822677C9A000CB1D7 /* SchoolsListViewController.swift */; };
+		7E84044D22677ECE000CB1D7 /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84044B22677ECE000CB1D7 /* SchoolTableViewCell.swift */; };
+		7E84044E22677ECE000CB1D7 /* SchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E84044C22677ECE000CB1D7 /* SchoolTableViewCell.xib */; };
 		7EFD8FE12260EF4200FD9DA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE02260EF4200FD9DA1 /* AppDelegate.swift */; };
-		7EFD8FE32260EF4200FD9DA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE22260EF4200FD9DA1 /* ViewController.swift */; };
 		7EFD8FE62260EF4200FD9DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE42260EF4200FD9DA1 /* Main.storyboard */; };
 		7EFD8FE92260EF4200FD9DA1 /* NYC_Schools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE72260EF4200FD9DA1 /* NYC_Schools.xcdatamodeld */; };
 		7EFD8FEB2260EF4300FD9DA1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EFD8FEA2260EF4300FD9DA1 /* Assets.xcassets */; };
@@ -60,9 +64,13 @@
 		7E84043B22674970000CB1D7 /* Result+additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+additional.swift"; sourceTree = "<group>"; };
 		7E84043D22676809000CB1D7 /* NYCSchoolsSatStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsSatStorageService.swift; sourceTree = "<group>"; };
 		7E84043F22676A27000CB1D7 /* DBSat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBSat.swift; sourceTree = "<group>"; };
+		7E840442226774AA000CB1D7 /* SchoolsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListViewModel.swift; sourceTree = "<group>"; };
+		7E840444226776D8000CB1D7 /* SchoolsListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListInteractor.swift; sourceTree = "<group>"; };
+		7E84044822677C9A000CB1D7 /* SchoolsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListViewController.swift; sourceTree = "<group>"; };
+		7E84044B22677ECE000CB1D7 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
+		7E84044C22677ECE000CB1D7 /* SchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolTableViewCell.xib; sourceTree = "<group>"; };
 		7EFD8FDD2260EF4200FD9DA1 /* NYC Schools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYC Schools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFD8FE02260EF4200FD9DA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7EFD8FE22260EF4200FD9DA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7EFD8FE52260EF4200FD9DA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EFD8FE82260EF4200FD9DA1 /* NYC_Schools.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NYC_Schools.xcdatamodel; sourceTree = "<group>"; };
 		7EFD8FEA2260EF4300FD9DA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -150,6 +158,42 @@
 			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
+		7E84044122677479000CB1D7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				7E840442226774AA000CB1D7 /* SchoolsListViewModel.swift */,
+				7E840444226776D8000CB1D7 /* SchoolsListInteractor.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		7E84044622677C58000CB1D7 /* UserStory */ = {
+			isa = PBXGroup;
+			children = (
+				7E84044722677C62000CB1D7 /* View */,
+				7E84044122677479000CB1D7 /* ViewModels */,
+			);
+			path = UserStory;
+			sourceTree = "<group>";
+		};
+		7E84044722677C62000CB1D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E84044A22677EAB000CB1D7 /* Cell */,
+				7E84044822677C9A000CB1D7 /* SchoolsListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E84044A22677EAB000CB1D7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7E84044B22677ECE000CB1D7 /* SchoolTableViewCell.swift */,
+				7E84044C22677ECE000CB1D7 /* SchoolTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		7EFD8FD42260EF4200FD9DA1 = {
 			isa = PBXGroup;
 			children = (
@@ -171,10 +215,10 @@
 		7EFD8FDF2260EF4200FD9DA1 /* NYC Schools */ = {
 			isa = PBXGroup;
 			children = (
+				7E84044622677C58000CB1D7 /* UserStory */,
 				7E84042D22667296000CB1D7 /* ServiceLayer */,
 				7EFD90032260EFFE00FD9DA1 /* Core */,
 				7EFD8FE02260EF4200FD9DA1 /* AppDelegate.swift */,
-				7EFD8FE22260EF4200FD9DA1 /* ViewController.swift */,
 				7EFD8FE42260EF4200FD9DA1 /* Main.storyboard */,
 				7EFD8FEA2260EF4300FD9DA1 /* Assets.xcassets */,
 				7EFD8FEC2260EF4300FD9DA1 /* LaunchScreen.storyboard */,
@@ -325,6 +369,7 @@
 				7EFD8FEE2260EF4300FD9DA1 /* LaunchScreen.storyboard in Resources */,
 				7EFD8FEB2260EF4300FD9DA1 /* Assets.xcassets in Resources */,
 				7EFD8FE62260EF4200FD9DA1 /* Main.storyboard in Resources */,
+				7E84044E22677ECE000CB1D7 /* SchoolTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,17 +387,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E84044D22677ECE000CB1D7 /* SchoolTableViewCell.swift in Sources */,
 				7E84043A2267494D000CB1D7 /* HTTPHeaders.swift in Sources */,
 				7E84043E22676809000CB1D7 /* NYCSchoolsSatStorageService.swift in Sources */,
 				7E84043622674168000CB1D7 /* NYCSchoolsSatApiService.swift in Sources */,
 				7E84041D226641EA000CB1D7 /* School.swift in Sources */,
+				7E840443226774AA000CB1D7 /* SchoolsListViewModel.swift in Sources */,
 				7E84041F226642F1000CB1D7 /* SchoolDto.swift in Sources */,
 				7E8404342267405E000CB1D7 /* SatDto.swift in Sources */,
 				7E8404212266432A000CB1D7 /* NYCSchoolsApiService.swift in Sources */,
+				7E84044922677C9A000CB1D7 /* SchoolsListViewController.swift in Sources */,
 				7E840438226743B1000CB1D7 /* NYCSchoolsSatRepository.swift in Sources */,
 				7E84042F226672F9000CB1D7 /* NYCSchoolsRepository.swift in Sources */,
 				7E84043C22674970000CB1D7 /* Result+additional.swift in Sources */,
-				7EFD8FE32260EF4200FD9DA1 /* ViewController.swift in Sources */,
+				7E840445226776D8000CB1D7 /* SchoolsListInteractor.swift in Sources */,
 				7E8404282266671F000CB1D7 /* NYCSchoolsStorageService.swift in Sources */,
 				7E840423226646DD000CB1D7 /* BaseUrls.swift in Sources */,
 				7EFD8FE12260EF4200FD9DA1 /* AppDelegate.swift in Sources */,
@@ -527,6 +575,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4TXZ2T6A4B;
 				INFOPLIST_FILE = "NYC Schools/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -545,6 +594,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4TXZ2T6A4B;
 				INFOPLIST_FILE = "NYC Schools/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
