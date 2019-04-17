@@ -26,6 +26,7 @@ final class ShoolSatViewModel {
         let mathScore: String
         let readingScore: String
         let writingScore: String
+        let location: School.Location?
     }
 
     weak var output: SchoolsSatViewModelOutput?
@@ -40,7 +41,7 @@ final class ShoolSatViewModel {
 
     func viewDidLoad() {
         if let sat = interactor.getSat(forSchool: school.identifer) {
-            output?.displayModel = sat.toDisplauModel()
+            output?.displayModel = sat.toDisplauModel(location: school.location)
             updateSat(isSilentMode: true)
         } else {
             updateSat(isSilentMode: false)
@@ -66,7 +67,8 @@ private extension ShoolSatViewModel {
             }
 
             switch result {
-            case .success(let sat) where sat.isEmpty == false: self.output?.displayModel = sat.first!.toDisplauModel()
+            case .success(let sat) where sat.isEmpty == false: self.output?.displayModel = sat.first!.toDisplauModel(location: self.school.location)
+            case .success(let sat) where sat.isEmpty == true: self.output?.state = .error(ApiError.noResponse)
             case .failure(let error): self.output?.state = .error(error)
             default: return
             }
@@ -76,10 +78,11 @@ private extension ShoolSatViewModel {
 
 private extension Sat {
 
-    func toDisplauModel() -> ShoolSatViewModel.DisplayModel {
+    func toDisplauModel(location: School.Location?) -> ShoolSatViewModel.DisplayModel {
         return ShoolSatViewModel.DisplayModel(schoolName: schoolName,
                                               mathScore: "Math Score \(mathScore)",
                                               readingScore: "Reading Score \(readingScore)",
-                                              writingScore: "Writing Score \(writingScore)")
+                                              writingScore: "Writing Score \(writingScore)",
+                                              location: location)
     }
 }

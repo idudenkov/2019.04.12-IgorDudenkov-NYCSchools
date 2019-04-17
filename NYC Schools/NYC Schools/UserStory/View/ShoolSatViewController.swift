@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MapKit
 
 final class ShoolSatViewController: UIViewController {
 
@@ -27,6 +28,7 @@ final class ShoolSatViewController: UIViewController {
         }
     }
 
+    @IBOutlet private weak var mapView: MKMapView!
     @IBOutlet private weak var spinerView: UIActivityIndicatorView!
     @IBOutlet private weak var shoolNameLable: UILabel!
     @IBOutlet private weak var mathScoreLable: UILabel!
@@ -40,6 +42,7 @@ final class ShoolSatViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupView()
         bindViewModel()
         viewModel.viewDidLoad()
     }
@@ -60,6 +63,18 @@ private extension ShoolSatViewController {
         mathScoreLable.text = displayModel.mathScore
         readingScoreLabel.text = displayModel.readingScore
         writingScoreLabel.text = displayModel.writingScore
+
+        if let latitude = displayModel.location?.latitude, let longitude = displayModel.location?.longitude {
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+            mapView.addAnnotation(annotation)
+        }
+    }
+
+    func setupView() {
+        let initialLocation = CLLocationCoordinate2D(latitude: 40.730610, longitude: -73.935242)
+        let coordinateRegion = MKCoordinateRegion(center: initialLocation, span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1))
+        mapView.setRegion(coordinateRegion, animated: true)
     }
 
     func bindViewModel() {
@@ -69,5 +84,5 @@ private extension ShoolSatViewController {
 
 extension ShoolSatViewModel.DisplayModel {
 
-    static let dummy = ShoolSatViewModel.DisplayModel(schoolName: "", mathScore: "", readingScore: "", writingScore: "")
+    static let dummy = ShoolSatViewModel.DisplayModel(schoolName: "", mathScore: "", readingScore: "", writingScore: "", location: nil)
 }

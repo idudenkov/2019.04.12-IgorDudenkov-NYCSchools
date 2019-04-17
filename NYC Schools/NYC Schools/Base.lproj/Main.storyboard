@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-n5-haI">
-                                <rect key="frame" x="24" y="319" width="327" height="174"/>
+                                <rect key="frame" x="24" y="165" width="327" height="482"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rat-ga-52K">
                                         <rect key="frame" x="0.0" y="0.0" width="327" height="0.0"/>
@@ -45,6 +45,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YDK-AQ-jpW">
+                                        <rect key="frame" x="0.0" y="182" width="327" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="73p-89-MPp"/>
+                                        </constraints>
+                                    </mapView>
                                 </subviews>
                             </stackView>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tqm-jF-0rx">
@@ -62,6 +68,7 @@
                         <viewLayoutGuide key="safeArea" id="BVs-nz-U52"/>
                     </view>
                     <connections>
+                        <outlet property="mapView" destination="YDK-AQ-jpW" id="mr9-iB-YjQ"/>
                         <outlet property="mathScoreLable" destination="nfM-AZ-cdk" id="B9W-Ya-1ZM"/>
                         <outlet property="readingScoreLabel" destination="L96-OV-B0P" id="4io-yl-Gvt"/>
                         <outlet property="shoolNameLable" destination="Rat-ga-52K" id="p3x-ou-QEs"/>
