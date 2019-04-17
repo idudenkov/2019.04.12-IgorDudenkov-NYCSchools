@@ -18,7 +18,7 @@ final class NYCSchoolsStorageService {
 
     private static let shared: NSPersistentContainer = {
         let model = NSManagedObjectModel(contentsOf: DBSchool.url)!
-        let container = NSPersistentContainer(name: "School", managedObjectModel: model)
+        let container = NSPersistentContainer(name: DBSchool.entityName, managedObjectModel: model)
 
         container.loadPersistentStores() { _, _ in}
         return container
@@ -27,7 +27,7 @@ final class NYCSchoolsStorageService {
     private static let writeContext = shared.newBackgroundContext()
 
     private static func defaultFetchRequest() -> NSFetchRequest<DBSchool> {
-        let fetchRequest = NSFetchRequest<DBSchool>(entityName: "School")
+        let fetchRequest = NSFetchRequest<DBSchool>(entityName: DBSchool.entityName)
         fetchRequest.sortDescriptors = []
         return fetchRequest
     }

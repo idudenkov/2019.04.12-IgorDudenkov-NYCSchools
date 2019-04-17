@@ -8,16 +8,6 @@
 
 import Foundation
 
-extension Result {
-
-    public var value: Success? {
-        if case let .success(value) = self {
-            return value
-        }
-        return nil
-    }
-}
-
 final class ApiRequestExecutor {
 
     static let defaultTimeOut: TimeInterval = 30.0
@@ -26,6 +16,10 @@ final class ApiRequestExecutor {
     init(endpoint: String, timeout: TimeInterval = ApiRequestExecutor.defaultTimeOut, additionalHeaders: [String: String] = [:]) throws {
         guard let url = URL(string: endpoint) else { throw ApiError.wrongPath }
         var request = URLRequest(url: url, timeoutInterval: timeout)
+
+        for (key, value) in HTTPHeaders.authenticationHeaders {
+            request.setValue(value, forHTTPHeaderField: key)
+        }
 
         for (key, value) in additionalHeaders {
             request.setValue(value, forHTTPHeaderField: key)
@@ -38,7 +32,7 @@ final class ApiRequestExecutor {
         let urlSession = URLSession.shared
         urlSession.dataTask(with: request)  { data, response, error in
             let response: ApiResponse<Value> = self.procces(data: data, response: response, error: error)
-            completion(response)
+            completionQueue.async { completion(response) }
         }.resume()
     }
 }

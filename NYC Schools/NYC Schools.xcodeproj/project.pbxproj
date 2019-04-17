@@ -14,6 +14,14 @@
 		7E8404262266668D000CB1D7 /* DBSchool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8404252266668D000CB1D7 /* DBSchool.swift */; };
 		7E8404282266671F000CB1D7 /* NYCSchoolsStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8404272266671F000CB1D7 /* NYCSchoolsStorageService.swift */; };
 		7E84042F226672F9000CB1D7 /* NYCSchoolsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84042E226672F9000CB1D7 /* NYCSchoolsRepository.swift */; };
+		7E8404322267306A000CB1D7 /* Sat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8404312267306A000CB1D7 /* Sat.swift */; };
+		7E8404342267405E000CB1D7 /* SatDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8404332267405E000CB1D7 /* SatDto.swift */; };
+		7E84043622674168000CB1D7 /* NYCSchoolsSatApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84043522674168000CB1D7 /* NYCSchoolsSatApiService.swift */; };
+		7E840438226743B1000CB1D7 /* NYCSchoolsSatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E840437226743B1000CB1D7 /* NYCSchoolsSatRepository.swift */; };
+		7E84043A2267494D000CB1D7 /* HTTPHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8404392267494D000CB1D7 /* HTTPHeaders.swift */; };
+		7E84043C22674970000CB1D7 /* Result+additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84043B22674970000CB1D7 /* Result+additional.swift */; };
+		7E84043E22676809000CB1D7 /* NYCSchoolsSatStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84043D22676809000CB1D7 /* NYCSchoolsSatStorageService.swift */; };
+		7E84044022676A27000CB1D7 /* DBSat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84043F22676A27000CB1D7 /* DBSat.swift */; };
 		7EFD8FE12260EF4200FD9DA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE02260EF4200FD9DA1 /* AppDelegate.swift */; };
 		7EFD8FE32260EF4200FD9DA1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE22260EF4200FD9DA1 /* ViewController.swift */; };
 		7EFD8FE62260EF4200FD9DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE42260EF4200FD9DA1 /* Main.storyboard */; };
@@ -44,6 +52,14 @@
 		7E8404252266668D000CB1D7 /* DBSchool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBSchool.swift; sourceTree = "<group>"; };
 		7E8404272266671F000CB1D7 /* NYCSchoolsStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsStorageService.swift; sourceTree = "<group>"; };
 		7E84042E226672F9000CB1D7 /* NYCSchoolsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsRepository.swift; sourceTree = "<group>"; };
+		7E8404312267306A000CB1D7 /* Sat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sat.swift; sourceTree = "<group>"; };
+		7E8404332267405E000CB1D7 /* SatDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SatDto.swift; sourceTree = "<group>"; };
+		7E84043522674168000CB1D7 /* NYCSchoolsSatApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsSatApiService.swift; sourceTree = "<group>"; };
+		7E840437226743B1000CB1D7 /* NYCSchoolsSatRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsSatRepository.swift; sourceTree = "<group>"; };
+		7E8404392267494D000CB1D7 /* HTTPHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHeaders.swift; sourceTree = "<group>"; };
+		7E84043B22674970000CB1D7 /* Result+additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Result+additional.swift"; sourceTree = "<group>"; };
+		7E84043D22676809000CB1D7 /* NYCSchoolsSatStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYCSchoolsSatStorageService.swift; sourceTree = "<group>"; };
+		7E84043F22676A27000CB1D7 /* DBSat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBSat.swift; sourceTree = "<group>"; };
 		7EFD8FDD2260EF4200FD9DA1 /* NYC Schools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYC Schools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFD8FE02260EF4200FD9DA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EFD8FE22260EF4200FD9DA1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				7E84041E226642F1000CB1D7 /* SchoolDto.swift */,
+				7E8404332267405E000CB1D7 /* SatDto.swift */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -100,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				7E84041C226641EA000CB1D7 /* School.swift */,
+				7E8404312267306A000CB1D7 /* Sat.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -108,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				7E8404252266668D000CB1D7 /* DBSchool.swift */,
+				7E84043F22676A27000CB1D7 /* DBSat.swift */,
 			);
 			path = DB;
 			sourceTree = "<group>";
@@ -116,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				7E84042E226672F9000CB1D7 /* NYCSchoolsRepository.swift */,
+				7E840437226743B1000CB1D7 /* NYCSchoolsSatRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -176,6 +196,7 @@
 		7EFD90032260EFFE00FD9DA1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				7E84043B22674970000CB1D7 /* Result+additional.swift */,
 				7EFD90042260F00700FD9DA1 /* Network */,
 			);
 			path = Core;
@@ -184,6 +205,7 @@
 		7EFD90042260F00700FD9DA1 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				7E8404392267494D000CB1D7 /* HTTPHeaders.swift */,
 				7E840422226646DD000CB1D7 /* BaseUrls.swift */,
 				7EFD90052260F0EE00FD9DA1 /* ApiRequestExecutor.swift */,
 				7EFD900C2260F67400FD9DA1 /* ApiError.swift */,
@@ -205,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				7E8404202266432A000CB1D7 /* NYCSchoolsApiService.swift */,
+				7E84043522674168000CB1D7 /* NYCSchoolsSatApiService.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -213,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				7E8404272266671F000CB1D7 /* NYCSchoolsStorageService.swift */,
+				7E84043D22676809000CB1D7 /* NYCSchoolsSatStorageService.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -318,16 +342,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E84043A2267494D000CB1D7 /* HTTPHeaders.swift in Sources */,
+				7E84043E22676809000CB1D7 /* NYCSchoolsSatStorageService.swift in Sources */,
+				7E84043622674168000CB1D7 /* NYCSchoolsSatApiService.swift in Sources */,
 				7E84041D226641EA000CB1D7 /* School.swift in Sources */,
 				7E84041F226642F1000CB1D7 /* SchoolDto.swift in Sources */,
+				7E8404342267405E000CB1D7 /* SatDto.swift in Sources */,
 				7E8404212266432A000CB1D7 /* NYCSchoolsApiService.swift in Sources */,
+				7E840438226743B1000CB1D7 /* NYCSchoolsSatRepository.swift in Sources */,
 				7E84042F226672F9000CB1D7 /* NYCSchoolsRepository.swift in Sources */,
+				7E84043C22674970000CB1D7 /* Result+additional.swift in Sources */,
 				7EFD8FE32260EF4200FD9DA1 /* ViewController.swift in Sources */,
 				7E8404282266671F000CB1D7 /* NYCSchoolsStorageService.swift in Sources */,
 				7E840423226646DD000CB1D7 /* BaseUrls.swift in Sources */,
 				7EFD8FE12260EF4200FD9DA1 /* AppDelegate.swift in Sources */,
 				7EFD900F2260FEB700FD9DA1 /* ApiResponse.swift in Sources */,
 				7EFD900D2260F67400FD9DA1 /* ApiError.swift in Sources */,
+				7E8404322267306A000CB1D7 /* Sat.swift in Sources */,
+				7E84044022676A27000CB1D7 /* DBSat.swift in Sources */,
 				7EFD8FE92260EF4200FD9DA1 /* NYC_Schools.xcdatamodeld in Sources */,
 				7E8404262266668D000CB1D7 /* DBSchool.swift in Sources */,
 				7EFD90062260F0EE00FD9DA1 /* ApiRequestExecutor.swift in Sources */,

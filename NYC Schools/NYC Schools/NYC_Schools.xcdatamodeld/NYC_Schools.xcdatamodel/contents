@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14490.98" systemVersion="18E226" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Sat" representedClassName=".DBSat" syncable="YES">
+        <attribute name="identifer" attributeType="String" syncable="YES"/>
+        <attribute name="mathScore" attributeType="String" syncable="YES"/>
+        <attribute name="readingScore" attributeType="String" syncable="YES"/>
+        <attribute name="schoolName" attributeType="String" syncable="YES"/>
+        <attribute name="writingScore" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="School" representedClassName=".DBSchool" syncable="YES">
         <attribute name="address" attributeType="String" syncable="YES"/>
         <attribute name="identifer" attributeType="String" syncable="YES"/>
@@ -12,5 +19,6 @@
     </entity>
     <elements>
         <element name="School" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Sat" positionX="-54" positionY="54" width="128" height="120"/>
     </elements>
 </model>

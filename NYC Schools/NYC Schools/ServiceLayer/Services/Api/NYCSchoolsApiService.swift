@@ -16,7 +16,11 @@ final class NYCSchoolsApiService: NYCSchoolsApiServiceProtocol {
 
     func fetchSchools(completion: @escaping (Result<[SchoolDto], ApiError>) -> Void) {
         let executor = try? ApiRequestExecutor(endpoint: BaseUrls.baseURL + BaseUrls.schoolURL)
-        executor?.execute { response in completion(response.result) }
+        executor?.execute(completionQueue: .global()) { response in
+            DispatchQueue.main.async {
+                completion(response.result)
+            }
+        }
     }
 }
 

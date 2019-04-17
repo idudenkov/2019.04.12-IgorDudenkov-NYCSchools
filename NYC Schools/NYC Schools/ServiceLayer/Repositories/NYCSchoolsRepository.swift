@@ -33,11 +33,12 @@ final class NYCSchoolsRepository: NYCSchoolsRepositoryProtocol {
             let schoolsDto = result.value
             let result = result.map { $0.map { $0.toDomain() } }
 
-            if let schoolsDto = schoolsDto {
-                self.storageService.save(schools: schoolsDto) { completion(result) }
+            guard let dto = schoolsDto else {
+                completion(result)
+                return
             }
 
-            completion(result)
+            self.storageService.save(schools: dto) { completion(result) }
         }
     }
 
