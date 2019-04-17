@@ -87,7 +87,15 @@ extension SchoolsListViewController {
     }
 }
 
-extension SchoolsListViewController: SchoolsListViewModelOutput {}
+extension SchoolsListViewController: SchoolsListViewModelOutput {
+
+    func showSchoolStaScreen(school: School) {
+        guard let navigationController = navigationController else { return }
+        let viewModel = ShoolSatViewModel(school: school)
+        let vc = ShoolSatViewController.instantiate(viewModel: viewModel)
+        navigationController.pushViewController(vc, animated: true)
+    }
+}
 
 private extension SchoolsListViewController {
 
@@ -121,6 +129,10 @@ private extension SchoolsListViewController {
     func hideActivity() {
         spinnerView?.stopAnimating()
     }
+
+}
+
+extension UIViewController {
 
     func presentAlert(error: Error) {
         let alert = UIAlertController(title: "Something wrong", message: "Error: \(error)", preferredStyle: .alert)

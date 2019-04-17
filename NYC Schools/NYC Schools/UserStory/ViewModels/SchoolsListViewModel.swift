@@ -12,6 +12,8 @@ import UIKit
 protocol SchoolsListViewModelOutput: class {
     var state: SchoolsListViewModel.State { get set }
     var schools: [SchoolDisplayModel] { get set }
+
+    func showSchoolStaScreen(school: School)
 }
 
 final class SchoolsListViewModel {
@@ -25,6 +27,7 @@ final class SchoolsListViewModel {
     weak var output: SchoolsListViewModelOutput?
 
     private let interactor: SchoolsListInteractorProtocol
+    private var schools = [String: School]()
 
     init(interactor: SchoolsListInteractorProtocol = SchoolsListInteractor()) {
         self.interactor = interactor
@@ -42,7 +45,8 @@ final class SchoolsListViewModel {
     }
 
     func viewDidSelect(school: SchoolDisplayModel) {
-        
+        guard let school = schools[school.identifer] else { return }
+        output?.showSchoolStaScreen(school: school)
     }
 }
 
@@ -71,6 +75,11 @@ private extension SchoolsListViewModel {
     }
 
     func procces(schools: [School]) -> [SchoolDisplayModel] {
+        self.schools = schools.reduce([String: School]()) { (dict, school) -> [String: School] in
+            var dict = dict
+            dict[school.identifer] = school
+            return dict
+        }
         return schools.sorted(by: { $0.name < $1.name }).map { $0.toDisplayModel() }
     }
 }

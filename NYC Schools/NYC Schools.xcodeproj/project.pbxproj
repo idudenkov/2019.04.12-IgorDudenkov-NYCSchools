@@ -27,6 +27,8 @@
 		7E84044922677C9A000CB1D7 /* SchoolsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84044822677C9A000CB1D7 /* SchoolsListViewController.swift */; };
 		7E84044D22677ECE000CB1D7 /* SchoolTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E84044B22677ECE000CB1D7 /* SchoolTableViewCell.swift */; };
 		7E84044E22677ECE000CB1D7 /* SchoolTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E84044C22677ECE000CB1D7 /* SchoolTableViewCell.xib */; };
+		7E8404522267BF18000CB1D7 /* ShoolSatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8404512267BF18000CB1D7 /* ShoolSatViewController.swift */; };
+		7E8404542267C237000CB1D7 /* ShoolSatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8404532267C237000CB1D7 /* ShoolSatViewModel.swift */; };
 		7EFD8FE12260EF4200FD9DA1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE02260EF4200FD9DA1 /* AppDelegate.swift */; };
 		7EFD8FE62260EF4200FD9DA1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE42260EF4200FD9DA1 /* Main.storyboard */; };
 		7EFD8FE92260EF4200FD9DA1 /* NYC_Schools.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EFD8FE72260EF4200FD9DA1 /* NYC_Schools.xcdatamodeld */; };
@@ -69,6 +71,8 @@
 		7E84044822677C9A000CB1D7 /* SchoolsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolsListViewController.swift; sourceTree = "<group>"; };
 		7E84044B22677ECE000CB1D7 /* SchoolTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolTableViewCell.swift; sourceTree = "<group>"; };
 		7E84044C22677ECE000CB1D7 /* SchoolTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SchoolTableViewCell.xib; sourceTree = "<group>"; };
+		7E8404512267BF18000CB1D7 /* ShoolSatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoolSatViewController.swift; sourceTree = "<group>"; };
+		7E8404532267C237000CB1D7 /* ShoolSatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoolSatViewModel.swift; sourceTree = "<group>"; };
 		7EFD8FDD2260EF4200FD9DA1 /* NYC Schools.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NYC Schools.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EFD8FE02260EF4200FD9DA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7EFD8FE52260EF4200FD9DA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -162,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				7E840442226774AA000CB1D7 /* SchoolsListViewModel.swift */,
+				7E8404532267C237000CB1D7 /* ShoolSatViewModel.swift */,
 				7E840444226776D8000CB1D7 /* SchoolsListInteractor.swift */,
 			);
 			path = ViewModels;
@@ -181,6 +186,7 @@
 			children = (
 				7E84044A22677EAB000CB1D7 /* Cell */,
 				7E84044822677C9A000CB1D7 /* SchoolsListViewController.swift */,
+				7E8404512267BF18000CB1D7 /* ShoolSatViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 				7E84043E22676809000CB1D7 /* NYCSchoolsSatStorageService.swift in Sources */,
 				7E84043622674168000CB1D7 /* NYCSchoolsSatApiService.swift in Sources */,
 				7E84041D226641EA000CB1D7 /* School.swift in Sources */,
+				7E8404542267C237000CB1D7 /* ShoolSatViewModel.swift in Sources */,
 				7E840443226774AA000CB1D7 /* SchoolsListViewModel.swift in Sources */,
 				7E84041F226642F1000CB1D7 /* SchoolDto.swift in Sources */,
 				7E8404342267405E000CB1D7 /* SatDto.swift in Sources */,
@@ -404,6 +411,7 @@
 				7E8404282266671F000CB1D7 /* NYCSchoolsStorageService.swift in Sources */,
 				7E840423226646DD000CB1D7 /* BaseUrls.swift in Sources */,
 				7EFD8FE12260EF4200FD9DA1 /* AppDelegate.swift in Sources */,
+				7E8404522267BF18000CB1D7 /* ShoolSatViewController.swift in Sources */,
 				7EFD900F2260FEB700FD9DA1 /* ApiResponse.swift in Sources */,
 				7EFD900D2260F67400FD9DA1 /* ApiError.swift in Sources */,
 				7E8404322267306A000CB1D7 /* Sat.swift in Sources */,

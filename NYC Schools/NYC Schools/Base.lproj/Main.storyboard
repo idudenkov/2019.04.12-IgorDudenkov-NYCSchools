@@ -1,11 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Shool Sat View Controller-->
+        <scene sceneID="cRG-EG-GDz">
+            <objects>
+                <viewController storyboardIdentifier="ShoolSatViewController" id="vX6-1N-U9q" customClass="ShoolSatViewController" customModule="NYC_Schools" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z1p-M7-GMt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="kfe-n5-haI">
+                                <rect key="frame" x="24" y="319" width="327" height="174"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rat-ga-52K">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfM-AZ-cdk">
+                                        <rect key="frame" x="0.0" y="8" width="327" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L96-OV-B0P">
+                                        <rect key="frame" x="0.0" y="66" width="327" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xia-nQ-a5e">
+                                        <rect key="frame" x="0.0" y="124" width="327" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tqm-jF-0rx">
+                                <rect key="frame" x="177.66666666666666" y="396" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tqm-jF-0rx" firstAttribute="centerY" secondItem="z1p-M7-GMt" secondAttribute="centerY" id="DAd-r8-62f"/>
+                            <constraint firstItem="BVs-nz-U52" firstAttribute="trailing" secondItem="kfe-n5-haI" secondAttribute="trailing" constant="24" id="XhO-mM-tVE"/>
+                            <constraint firstItem="tqm-jF-0rx" firstAttribute="centerX" secondItem="z1p-M7-GMt" secondAttribute="centerX" id="pvx-1g-flY"/>
+                            <constraint firstItem="kfe-n5-haI" firstAttribute="centerY" secondItem="z1p-M7-GMt" secondAttribute="centerY" id="rAh-D1-Yvn"/>
+                            <constraint firstItem="kfe-n5-haI" firstAttribute="leading" secondItem="BVs-nz-U52" secondAttribute="leading" constant="24" id="uCY-5b-Wk2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BVs-nz-U52"/>
+                    </view>
+                    <connections>
+                        <outlet property="mathScoreLable" destination="nfM-AZ-cdk" id="B9W-Ya-1ZM"/>
+                        <outlet property="readingScoreLabel" destination="L96-OV-B0P" id="4io-yl-Gvt"/>
+                        <outlet property="shoolNameLable" destination="Rat-ga-52K" id="p3x-ou-QEs"/>
+                        <outlet property="spinerView" destination="tqm-jF-0rx" id="4A9-8F-g7X"/>
+                        <outlet property="writingScoreLabel" destination="xia-nQ-a5e" id="Cep-4R-ALi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kz1-uA-CR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246" y="-229"/>
+        </scene>
+    </scenes>
 </document>
